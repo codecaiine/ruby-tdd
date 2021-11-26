@@ -17,14 +17,14 @@ class Solver
   end
 
   def fizzbuzz(n)
-    div_3 = n.modulo(3).zero?
-    div_5 = n.modulo(5).zero?
+    div_a = n.modulo(3).zero?
+    div_b = n.modulo(5).zero?
 
-    if div_3 && div_5
+    if div_a && div_b
       'fizzbuzz'
-    elsif div_5
+    elsif div_b
       'buzz'
-    elsif div_3
+    elsif div_a
       'fizz'
     else
       n.to_s
