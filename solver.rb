@@ -8,3 +8,8 @@ class Solver
         'Oh, there is an error. Please use a positive number'
       end
     end
+
+    def reverser(str)
+        str.reverse
+      end
+      
