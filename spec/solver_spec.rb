@@ -19,7 +19,10 @@ describe Solver do
     end
 
     it 'should raise an exception for negative integers' do
-      expect { @solver.factorial(-5) }.to raise_error
+        context 'negative integers' do
+            it 'should raise an exception' do
+              expect { @solver.factorial(-5) }.to raise_exception
+        end
     end
   end
 end
