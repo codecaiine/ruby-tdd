@@ -12,7 +12,7 @@ describe Solver do
         expect(result).to eq(1)
       end
 
-      it 'should return multiplication of all integers from 1 to N' do
+      it 'Return all integers multiplication from 1 to N' do
         result = @solver.factorial 5
         expect(result).to eq(1 * 2 * 3 * 4 * 5)
       end

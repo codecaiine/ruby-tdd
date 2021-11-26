@@ -1,27 +1,33 @@
 class Solver
-  def factorial(num)
-    if num.zero?
-      1
-    elsif num.positive?
-      num * factorial(num - 1)
-    else
-      'Oh, there is an error. Please use a positive number'
+  def factorial(n)
+    raise StandardError, 'This method only accepts 0 and positive integers' if n.negative?
+
+    result = 1
+
+    while n.positive?
+      result *= n
+      n -= 1
     end
+
+    result
   end
 
-  def reverser(str)
-    str.reverse
+  def reverse(word)
+    word.reverse
   end
 
-  def fizzbuzz(num)
-    if num.modulo(3).zero? && num.modulo(5).zero?
+  def fizzbuzz(n)
+    div_3 = n.modulo(3).zero?
+    div_5 = n.modulo(5).zero?
+
+    if div_3 && div_5
       'fizzbuzz'
-    elsif num.modulo(3).zero?
-      'fizz'
-    elsif num.modulo(5).zero?
+    elsif div_5
       'buzz'
+    elsif div_3
+      'fizz'
     else
-      num.to_s
+      n.to_s
     end
   end
 end
