@@ -7,7 +7,7 @@ describe Solver do
   describe '#factorial' do
     context '0 and positive integers' do
       it 'should return 1 when N is 0' do
-        result = @solver.factorial 1
+        result = @solver.factorial 0
         expect(result).to eq(1)
       end
       it 'should return multiplication of all integers from 1 to N' do
